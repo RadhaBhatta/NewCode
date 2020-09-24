@@ -1,0 +1,31 @@
+const testCases = [
+    [[[
+        [-1, 1, 0, -1, 1],
+        [1, 0, 1, -1, 1],
+        [1, 0, 0, -1, 1],
+    ]], 2, "Tomatoes will be rotten in 2 days"],
+    [[[
+        [-1, 1, 0, -1, 1],
+        [0, 0, 1, -1, 1],
+        [1, 0, 0, -1, 1],
+    ]], -1, "All tomatoes cannot be rotten"]
+]
+
+
+function main(
+    tomatoGrid){
+    // complete this function
+    var a = testCases.split('[[[');
+    var b = a[2].split(']]');
+    var c = b[1];
+    var multiply = c.reduce(function(e,f){
+    var data = e*f;
+    
+    if(data === -1){
+    return -1
+}
+}
+
+testCases.forEach(([ input, expectedResult, message ]) => {
+    console.assert(main(...input) === expectedResult, message)
+})
